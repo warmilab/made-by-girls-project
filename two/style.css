@@ -1,0 +1,181 @@
+/*
+Nombre de la página: Diseño con barra a la derecha
+Descripcion: Diseño con barra a la derecha para una página web.
+Autor: WarmiLab
+
+Esta página fue creada con fines educativos, para el workshop de WarmiLab.
+*/
+
+/* 1. Estructura
+------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'Roboto';
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+
+.site {
+  background-color: white;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* 2. Elementos
+------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 26px;
+}
+p {
+  margin-bottom: 26px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* 3. Cabecera
+------------------------------*/
+.site-cabecera {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.site-header {
+  position: relative;
+}
+
+.site-titulo {
+  color: #fff;
+  left: 5%;
+  position: absolute;
+  top: 20%;
+}
+
+.site-titulo h1 {
+  text-transform: capitalize;
+}
+
+/* 4. Navegacion
+------------------------------*/
+.site-navegacion ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-navegacion li {
+  display: inline-block;
+}
+.site-navegacion a {
+  display: block;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.site-navegacion a:hover {
+  color: #4cacbe;
+}
+
+/* 5. Contenido
+------------------------------*/
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.site-contenido {
+  padding-bottom: 40px;
+  border-bottom: 1px dotted #999;
+  width: 100%;
+}
+
+.site-contenido h1 {
+  margin: 40px 0 80px;
+}
+
+.barra-lateral {
+  padding-top: 40px;
+  font-size: 13px;
+  line-height: 21px;
+  text-align: center;
+  width: 100%;
+}
+
+.widget {
+  padding-bottom: 20px;
+}
+
+/* 6. Pie de página
+------------------------------*/
+.site-footer {
+  background-color: #888682;
+  color: white;
+  overflow: hidden;
+  padding: 40px;
+}
+
+/* 7. Media
+------------------------------*/
+@media screen and (min-width: 800px) {
+  /* Cabecera */
+  .site-cabecera {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  /* Navegacion */
+  .site-navegacion a {
+    padding: 0 0 0 20px;
+  }
+
+  .content-wrapper {
+    flex-direction: row;
+  }
+
+  /* Contenido */
+  .site-contenido {
+    width: 70%;
+    border: none;
+  }
+  .barra-lateral {
+    width: 30%;
+    padding-top: 0;
+    text-align: left;
+  }
+  .widget {
+    padding-left: 20px;
+  }
+
+  /* Pie de página */
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .site-footer .fila {
+    display: flex;
+    flex-direction: row;
+  }
+  .site-footer .columna {
+    padding-right: 2%;
+    margin-bottom: 2%;
+  }
+  .site-footer .columna.last {
+    padding-right: 0;
+  }
+}
