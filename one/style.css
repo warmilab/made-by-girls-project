@@ -1,0 +1,165 @@
+/*
+Nombre de la página: Diseño con una columna
+Descripcion: Diseño de una columna para una página web.
+Autor: WarmiLab
+
+Esta página fue creada con fines educativos, para el workshop de WarmiLab.
+*/
+
+/* 1. Estructura
+------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+  background-color: #fff;
+  font-size: 16px;
+  font-family: 'Roboto';
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+}
+.site {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* 2. Elementos
+------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 26px;
+}
+p {
+  margin-bottom: 26px;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* 3. Cabecera
+------------------------------*/
+.site-cabecera {
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.site-cabecera #avatar {
+  bottom: 0;
+  left: 10px;
+  position: absolute;
+}
+
+.site-header {
+  position: relative;
+}
+.site-titulo {
+  color: #868181;
+  left: 5%;
+  position: absolute;
+  top: 20%;
+}
+
+.site-titulo h1 {
+  color: #5461e3;
+  text-transform: uppercase;
+}
+
+/* 4. Navegacion
+------------------------------*/
+.site-navegacion ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.site-navegacion li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.site-navegacion a {
+  display: block;
+  text-decoration: none;
+  font-weight: 300;
+  color: #868181;
+  font-size: 16px;
+  padding: 0 20px;
+}
+.site-navegacion a:hover {
+  color: #333;
+}
+
+/* 5. Contenido
+------------------------------*/
+.site-contenido {
+  background-color: #5461e3;
+  color: #fff;
+  padding: 60px;
+}
+
+.site-contenido h1 {
+  margin: 40px 0 80px;
+  text-align: center;
+}
+
+/* 6. Pie de página
+------------------------------*/
+.site-footer {
+  background-color: #fff;
+  color: #333;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.site-footer img {
+  height: 120px;
+  width: auto;
+}
+
+.site-footer .columna {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* 7. Media
+------------------------------*/
+@media screen and (min-width: 800px) {
+  /* Cabecera */
+  .site-cabecera {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  /* Navegacion */
+  .site-navegacion a {
+    padding: 0 0 0 20px;
+  }
+
+  /* Pie de página */
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .site-footer .fila {
+    display: flex;
+    flex-direction: row;
+  }
+  .site-footer .columna {
+    padding-right: 2%;
+    margin-bottom: 2%;
+  }
+  .site-footer .columna.last {
+    padding-right: 0;
+  }
+}
